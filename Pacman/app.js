@@ -10,11 +10,20 @@
   var power_pellet_sound;
   var congratulations_sound;
   var boom_sound;
-  var gameover = true;
+  var gameover = false;
+  var button;
+  var button1;
+  var font;
+  
 
 
   function preload() {
       ghost_img = loadImage('images/ghosts.png');
+      logo = loadImage('images/logo.png');
+      logo1 = loadImage('images/logo1.png');
+      loadImage('images/exit.png');
+      loadImage('images/play.png');
+      font = loadFont("Font.otf");
 
       intro_music = loadSound('sounds/pacman_beginning.mp3');
       intro_music.setVolume(0.3);
@@ -49,12 +58,14 @@
 
 
   }
-
+  
 
   function setup(players_num) {
       angleMode(DEGREES);
       rectMode(CENTER);
       imageMode(CENTER);
+      mode = 0
+      textFont(font);
 
       var pacmans = [];
 
@@ -71,8 +82,51 @@
 
   }
 
-  function draw() {
+  function mode1() {
 
+    mode = 1;
+    
+}
+
+function exitGame() {
+
+    window.close();
+    
+}
+
+  function draw() {
+    if (mode == 0){
+
+        background(0);
+        image(logo, 410, 315, 450, 300);
+        image(logo1, 400, 100, 300, 120);
+        fill("White");
+        textSize(35);
+        text("2021", 260, 160);
+        textSize(25);
+        text("3815ICT / 7805ICT", 300, 205);
+        textSize(15);
+        text("Yasin Cakar", 650, 730);
+        text("Mohammad Mari", 650, 760);
+        text("David Todorovic", 650, 790);
+        // Play button
+        button = createImg('images/play.png');
+        button.position(325, 475);
+        button.size(175, 75);
+        button.mousePressed(mode1);
+        // Configrure button
+        textSize(25);
+        text("CONFIGURE", 330, 625);
+        // Exit button
+        button1 = createImg('images/exit.png');
+        button1.position(325, 700);
+        button1.size(175, 75);
+        button1.mousePressed(exitGame);
+    }
+
+
+    if (mode == 1) {
+      removeElements();
       background(0);
       level.drawMap(level.current_map);
 
@@ -110,6 +164,7 @@
       }
 
       hud.show();
+    }
   }
 
 
