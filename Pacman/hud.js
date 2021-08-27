@@ -17,12 +17,12 @@ function HUD(level) {
         for(i=pacmans.length -1; i>-1; i--){
             fill(pacmans[i].color);
             text("lives: " + pacmans[i].lives, (i*700) + 24, height -5);
-            text("score: " + pacmans[i].score, (i*600) + 20, 20);
+           // text("score: " + pacmans[i].score, (i*600) + 20, 20);
             
         }
         
 
-        text("level: " + this.level, width / 2 -27, 20);
+       // text("level: " + this.level, width / 2 -27, 20);
 
 
         if (gameover) {

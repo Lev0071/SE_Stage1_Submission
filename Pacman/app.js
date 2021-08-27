@@ -26,25 +26,25 @@
       font = loadFont("Font.otf");
 
       intro_music = loadSound('sounds/pacman_beginning.mp3');
-      intro_music.setVolume(0.3);
+      intro_music.setVolume(0.0);
 
       pacman_chomp_sound = loadSound('sounds/pacman_chomp.m4a');
-      pacman_chomp_sound.setVolume(0.05);
+      pacman_chomp_sound.setVolume(0.00);
 
       pacman_death_sound = loadSound('sounds/pacman_death.mp3');
-      pacman_death_sound.setVolume(0.3);
+      pacman_death_sound.setVolume(0.0);
 
       pacman_eatghost_sound = loadSound('sounds/ghost-die.m4a');
-      pacman_eatghost_sound.setVolume(0.3);
+      pacman_eatghost_sound.setVolume(0.0);
 
       power_pellet_sound = loadSound('sounds/power_pellet.m4a');
-      power_pellet_sound.setVolume(0.3);
+      power_pellet_sound.setVolume(0.0);
 
       congratulations_sound = loadSound('sounds/congratulations.m4a');
-      congratulations_sound.setVolume(0.4);
+      congratulations_sound.setVolume(0.0);
 
       boom_sound = loadSound('sounds/boom.m4a');
-      boom_sound.setVolume(0.3);
+      boom_sound.setVolume(0.0);
 
 
 
@@ -106,9 +106,9 @@ function exitGame() {
         textSize(25);
         text("3815ICT / 7805ICT", 300, 205);
         textSize(15);
-        text("Yasin Cakar", 650, 730);
-        text("Mohammad Mari", 650, 760);
-        text("David Todorovic", 650, 790);
+        text("Yasin Cakar", 5, 730);
+        text("Mohammad Mari", 5, 760);
+        text("David Todorovic", 5, 790);
         // Play button
         button = createImg('images/play.png');
         button.position(325, 475);

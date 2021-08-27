@@ -10,6 +10,7 @@ function Wall(x, y, w, h, level_num) {
     })();
 
     this.show = function () {
+        stroke(0);
         fill(this.color);
         rect(this.x + this.w / 2, this.y + this.h / 2, this.w, this.h);
     }
@@ -163,27 +164,27 @@ function Level(level_num, players_num) {
     this.blueprint1 = ["WWWWWWWWWWWWWWWWWWWWWWWWWWW",
                        "W0          WWW          0W",
                        "W W WWWWWWW WWW WWWWWWW W W",
-                       "W W G        0        G W W",
+                       "W W          0          W W",
                        "W W WWW WWWW W WWWW WWW W W",
                        "W W          W          W W",
                        "W WWWWW WWWW W WWWW WWWWW W",
                        "W       W    W    W       W",
-                       "W WWWWW W WWWWW W W WWWWW W",
-                       "W       W W  0  W W       W",
-                       "WWWWW W W W WWWWW W W WWWWW",
+                       "W WWWWW W G     G W WWWWW W",
+                       "W       W  0      W       W",
                        "WWWWW W W         W W WWWWW",
-                       "WWWWW W W WWWWWWW W W WWWWW",
+                       "WWWWW W W G     G W W WWWWW",
+                       "WWWWW W WWWWWWWWWWW W WWWWW",
                        "HHHHH                 HHHHH",
                        "WWWWW W W WWWWWWW W W WWWWW",
-                       "WWWWW W W  P   P  W W WWWWW",
+                       "WWWWW W W         W W WWWWW",
                        "WWWWW W W WWWWWWW W W WWWWW",
                        "W       W    W    W       W",
                        "W WWWWW W WW W WW W WWWWW W",
-                       "W0                       0W",
+                       "W0           P           0W",
                        "W WWWWW W W W WWWWW W W W W",
                        "W W   W W W W W   W W W W W",
                        "W W W W W W W W W W W W W W",
-                       "W W W W W G W W W W W G W W",
+                       "W W W W W   W W W W W   W W",
                        "W W W W WWWWW W W W WWWWW W",
                        "W            0            W",
                        "WWWWWWWWWWWWWWWWWWWWWWWWWWW"];
