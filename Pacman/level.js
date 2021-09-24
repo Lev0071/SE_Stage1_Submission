@@ -5,7 +5,7 @@ function Wall(x, y, w, h, level_num) {
     this.w = w;
     this.h = h;
     this.color = (function () {
-        var colors = ["#1919A6", "#E75480", "#228B22", "#B22222", "#d3d3d3", "#fffdd0", "#FFD700"];
+        var colors = ["BLUE", "#E75480", "#228B22", "#B22222", "#d3d3d3", "#fffdd0", "#FFD700"];
         return colors[Math.floor(level.level_num / 2)] || colors[colors.length - 1];
     })();
 
@@ -161,22 +161,22 @@ function Level(level_num, players_num) {
 
 
     //Ws are walls, blanks are halls (pellets, 1s are powerups)
-    this.blueprint1 = ["WWWWWWWWWWWWWWWWWWWWWWWWWWW",
-                       "W0          WWW          0W",
+    this.blueprint1 = ["WWWWWWWWWWWWWHWWWWWWWWWWWWW",
+                       "W0          WHW          0W",
                        "W W WWWWWWW WWW WWWWWWW W W",
                        "W W          0          W W",
                        "W W WWW WWWW W WWWW WWW W W",
                        "W W          W          W W",
-                       "W WWWWW WWWW W WWWW WWWWW W",
-                       "W       W    W    W       W",
-                       "W WWWWW W G     G W WWWWW W",
-                       "W       W  0      W       W",
-                       "WWWWW W W         W W WWWWW",
-                       "WWWWW W W G     G W W WWWWW",
-                       "WWWWW W WWWWWWWWWWW W WWWWW",
-                       "HHHHH                 HHHHH",
+                       "W WWWWW W W  W  W W WWWWW W",
+                       "W       W WG W GW W       W",
+                       "W WWWWW W WG   GW W WWWWW W",
+                       "W       W W     W W       W",
                        "WWWWW W W WWWWWWW W W WWWWW",
-                       "WWWWW W W         W W WWWWW",
+                       "HHHHW W W         W W WHHHH",
+                       "WWWWW W W WWWWWWW W W WWWWW",
+                       "HHHHH        0        HHHHH",
+                       "WWWWW W W WWWWWWW W W WWWWW",
+                       "HHHHW W W         W W WHHHH",
                        "WWWWW W W WWWWWWW W W WWWWW",
                        "W       W    W    W       W",
                        "W WWWWW W WW W WW W WWWWW W",

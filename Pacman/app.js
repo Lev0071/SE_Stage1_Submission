@@ -13,7 +13,9 @@
   var gameover = false;
   var button;
   var button1;
+  var button2;
   var font;
+  var maze;
   
 
 
@@ -21,8 +23,10 @@
       ghost_img = loadImage('images/ghosts.png');
       logo = loadImage('images/logo.png');
       logo1 = loadImage('images/logo1.png');
+      maze = loadImage('images/maze.png');
       loadImage('images/exit.png');
       loadImage('images/play.png');
+      loadImage('images/configure.png');
       font = loadFont("Font.otf");
 
       intro_music = loadSound('sounds/pacman_beginning.mp3');
@@ -88,6 +92,12 @@
     
 }
 
+ function mode2() {
+
+    mode = 2;
+    
+}
+
 function exitGame() {
 
     window.close();
@@ -96,7 +106,7 @@ function exitGame() {
 
   function draw() {
     if (mode == 0){
-
+        removeElements();
         background(0);
         image(logo, 410, 315, 450, 300);
         image(logo1, 400, 100, 300, 120);
@@ -106,6 +116,7 @@ function exitGame() {
         textSize(25);
         text("3815ICT / 7805ICT", 300, 205);
         textSize(15);
+        text("Jerry Li", 5, 700);
         text("Yasin Cakar", 5, 730);
         text("Mohammad Mari", 5, 760);
         text("David Todorovic", 5, 790);
@@ -115,8 +126,10 @@ function exitGame() {
         button.size(175, 75);
         button.mousePressed(mode1);
         // Configrure button
-        textSize(25);
-        text("CONFIGURE", 330, 625);
+        button2 = createImg('images/configure.png');
+        button2.position(323, 580);
+        button2.size(185, 85);
+        button2.mousePressed(mode2)
         // Exit button
         button1 = createImg('images/exit.png');
         button1.position(325, 700);
@@ -124,7 +137,17 @@ function exitGame() {
         button1.mousePressed(exitGame);
     }
 
-
+    if (mode == 2) {
+        removeElements();
+        background(0);
+        textSize(50);
+        text("CONFIGURE", 250, 100);
+        textSize(30);
+        text("MAZE OPTIONS:", 270, 200);
+        text("NORMAL", 100, 700);
+        image(maze, 200, 450, 250, 250);
+        text("RANDOM", 500, 700);
+    }
     if (mode == 1) {
       removeElements();
       background(0);
