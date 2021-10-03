@@ -18,6 +18,9 @@
   var button4;
   var font;
   var maze;
+  var question;
+  var randomMaze = 0
+  var num;
   
 
 
@@ -26,19 +29,17 @@
       logo = loadImage('images/logo.png');
       logo1 = loadImage('images/logo1.png');
       maze = loadImage('images/maze.png');
+      question = loadImage('images/question.png');
 
       loadImage('images/exit.png');
       loadImage('images/play.png');
       loadImage('images/configure.png');
-      loadImage('images/exit1.png');
-      loadImage('images/play1.png');
-      loadImage('images/configure1.png');
       loadImage('images/exit2.png');
       loadImage('images/play2.png');
       loadImage('images/configure2.png');
-
       loadImage('images/normal.png');
       loadImage('images/random.png');
+      
 
       font = loadFont("Font.otf");
 
@@ -151,43 +152,34 @@ function exitGame() {
         button1.mousePressed(exitGame);
     }
 
-    function normalMode() {
-        mode = 3
+    this.normalMode = function() {
+        mode = 0
     }
-    // Normal mode
-    if (mode == 3){
-        removeElements();
-        background(0);
-        image(logo, 410, 315, 450, 300);
-        image(logo1, 400, 100, 300, 120);
-        fill("White");
-        textSize(35);
-        text("2021", 260, 160);
-        textSize(25);
-        text("3815ICT / 7805ICT", 300, 205);
-        textSize(15);
-        text("Jerry Li", 5, 700);
-        text("Yasin Cakar", 5, 730);
-        text("Mohammad Mari", 5, 760);
-        text("David Todorovic", 5, 790);
-        // Play button
-        button = createImg('images/play1.png');
-        button.position(325, 475);
-        button.size(175, 75);
-        button.mousePressed(mode1);
-        // Configrure button
-        button2 = createImg('images/configure1.png');
-        button2.position(323, 580);
-        button2.size(185, 85);
-        button2.mousePressed(mode2)
-        // Exit button
-        button1 = createImg('images/exit1.png');
-        button1.position(325, 700);
-        button1.size(175, 75);
-        button1.mousePressed(exitGame);
+
+    this.mode5 = function() {
+        mode = 1 
     }
-    function randomMode() {
+    
+    this.randomMode = function() {
+        num = 4
         mode = 4
+        level.buildNewMap(level.blueprint2);
+
+    }
+    //Exit in game
+    this.randomMazes = function () {
+        mode = 4
+        randomMaze = randomMaze + 1
+        if (randomMaze == 1){
+            level.buildNewMap(level.blueprint3);
+        }
+        if (randomMaze == 2){
+            level.buildNewMap(level.blueprint4);
+        }
+        if (randomMaze == 3){
+            level.buildNewMap(level.blueprint1);
+        }
+        
     }
         // Random mode
         if (mode == 4){
@@ -209,7 +201,7 @@ function exitGame() {
             button = createImg('images/play2.png');
             button.position(325, 475);
             button.size(175, 75);
-            button.mousePressed(mode1);
+            button.mousePressed(mode5);
             // Configrure button
             button2 = createImg('images/configure2.png');
             button2.position(323, 580);
@@ -236,6 +228,7 @@ function exitGame() {
         normal.size(175, 75);
         normal.mousePressed(normalMode);
         //Random mode
+        image(question, 600, 450, 300, 300);
         normal = createImg('images/random.png');
         normal.position(500, 700);
         normal.size(175, 75);
@@ -282,6 +275,11 @@ function exitGame() {
 
       hud.show();
     }
+    
+  
+        
+  
+        
   }
 
 

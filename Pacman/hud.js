@@ -11,7 +11,16 @@ function HUD(level) {
     this.color = "yellow";
 
     this.show = function () {
+
+           if(num == 4){
+            button1 = createImg('images/exit2.png');
+            button1.position(350, 785);
+            button1.size(75, 36);
+            button1.mousePressed(randomMazes);
+        }
+
         
+
         textSize(20);
         
         for(i=pacmans.length -1; i>-1; i--){

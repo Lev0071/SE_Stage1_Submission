@@ -190,91 +190,91 @@ function Level(level_num, players_num) {
      "WWWWWWWWWWWWWWWWWWWWWWWWWWW"];
 
 // Random_1
-// this.blueprint1 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
-//                     "W    P    W           W   W",// ✓ 4
-//                     "W WWW WWW WWWWW WWW WWW W W",
-//                     "W W W W W     W   W     W W",// ✓ 9
-//                     "W W W W WWWWW WWWWWWWWWWW W",// ✓ 21
-//                     "W WGW W W         W   W   W",// ✓ 8
-//                     "W W W W W WWWWWWW W W W W W",// ✓ 17
-//                     "W0  W W   W     W   WGW W W",// ✓ 9
-//                     "W WWW W WWW WWW WWWWW W WWW",// ✓ 20
-//                     "W W   W W   W   W W   W   W",// ✓ 9
-//                     "WWW WWWWW WWW WWW W WWWWW W",// ✓ 21
-//                     "W G W     W   W     W     W",// ✓ 6
-//                     "W W WWWWWWW WWWWW WWW W WWW",// ✓ 21
-//                     "W W     W W     W W   W   W",// ✓
-//                     "W WWWWW W WWWWW W WWWWW W W",// ✓ 20
-//                     "W   W         W W     W W W",// ✓
-//                     "W W WWWWWWWWWWW WWWWW WWW W",// ✓
-//                     "W W         W   W W   W   W",// ✓
-//                     "W WWWWWWWWW W WWW W WWW WWW",// ✓
-//                     "W W     W   W W     W  0  W",// ✓
-//                     "W W WWW W W W WWWWW W WWW W",// ✓
-//                     "W W W     W W     W W   W W",// ✓
-//                     "W W W WWWWW WWWWW W WWWWW W",// ✓
-//                     "W W W W   W     W W W   W W",// ✓
-//                     "W W WWW W WWWWWWW W W W W W",// ✓
-//                     "W W   0 W    G    W   W   W",// ✓
-//                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];// ✓
+ this.blueprint2 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
+                     "W    P    W           W   W",// ✓ 4
+                     "W WWW WWW WWWWW WWW WWW W W",
+                     "W W W W W     W   W     W W",// ✓ 9
+                     "W W W W WWWWW WWWWWWWWWWW W",// ✓ 21
+                     "W WGW W W         W   W   W",// ✓ 8
+                     "W W W W W WWWWWWW W W W W W",// ✓ 17
+                     "W0  W W   W     W   WGW W W",// ✓ 9
+                     "W WWW W WWW WWW WWWWW W WWW",// ✓ 20
+                     "W W   W W   W   W W   W   W",// ✓ 9
+                     "WWW WWWWW WWW WWW W WWWWW W",// ✓ 21
+                     "W G W     W   W     W     W",// ✓ 6
+                     "W W WWWWWWW WWWWW WWW W WWW",// ✓ 21
+                     "W W     W W     W W   W   W",// ✓
+                     "W WWWWW W WWWWW W WWWWW W W",// ✓ 20
+                     "W   W         W W     W W W",// ✓
+                     "W W WWWWWWWWWWW WWWWW WWW W",// ✓
+                     "W W         W   W W   W   W",// ✓
+                     "W WWWWWWWWW W WWW W WWW WWW",// ✓
+                     "W W     W   W W     W  0  W",// ✓
+                     "W W WWW W W W WWWWW W WWW W",// ✓
+                     "W W W     W W     W W   W W",// ✓
+                     "W W W WWWWW WWWWW W WWWWW W",// ✓
+                     "W W W W   W     W W W   W W",// ✓
+                     "W W WWW W WWWWWWW W W W W W",// ✓
+                     "W W   0 W    G    W   W   W",// ✓
+                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];// ✓
 
 // Random_2
-// this.blueprint1 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
-//                     "W0    P        W   W W   0W",
-//                     "WWWWWWWWWWWWW W W W W W W W",
-//                     "W           W W   W   W W W",
-//                     "W WWWWWWWWW W WWWWWWW W W W",
-//                     "W0  W   W W W      0W W W W",
-//                     "WWW W W W W W WWWWW WWW W W",
-//                     "W W W W W W W     W     W W",
-//                     "W W W W W W WWWWW WWWWWWW W",
-//                     "W W   W W     W W W   W   W",
-//                     "W WWWWW WWWWW W W WWW W WWW",
-//                     "W     W     W W W     W   W",
-//                     "W WWW WWWWW W W WWWWW WWW W",
-//                     "W   W     W W0W W       W W",
-//                     "WWWWW WWWWWWW W W WWWWWWW W",
-//                     "W     W     W W   W   W   W",
-//                     "W WWWWW WWW W WWWWW W W W W",
-//                     "W W     W W   W     W   W W",
-//                     "W W WWWWW WWWWW WWWWWWWWW W",
-//                     "W G W     W       W  G  W W",
-//                     "W WWWWW W WWWWW W WWW W W W",
-//                     "W     W W     W W W   W W W",
-//                     "WWWWW W WWWWW WWW W WWWWW W",
-//                     "W W   W   W   W   W   W   W",// ✓
-//                     "W W WWWWW W WWW           W",
-//                     "W0 G      W     W   W  G 0W",
-//                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];// ✓
+ this.blueprint3 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
+                     "W0    P        W   W W   0W",
+                     "WWWWWWWWWWWWW W W W W W W W",
+                     "W           W W   W   W W W",
+                     "W WWWWWWWWW W WWWWWWW W W W",
+                     "W0  W   W W W      0W W W W",
+                     "WWW W W W W W WWWWW WWW W W",
+                     "W W W W W W W     W     W W",
+                     "W W W W W W WWWWW WWWWWWW W",
+                     "W W   W W     W W W   W   W",
+                     "W WWWWW WWWWW W W WWW W WWW",
+                     "W     W     W W W     W   W",
+                     "W WWW WWWWW W W WWWWW WWW W",
+                     "W   W     W W0W W       W W",
+                     "WWWWW WWWWWWW W W WWWWWWW W",
+                     "W     W     W W   W   W   W",
+                     "W WWWWW WWW W WWWWW W W W W",
+                     "W W     W W   W     W   W W",
+                     "W W WWWWW WWWWW WWWWWWWWW W",
+                     "W G W     W       W  G  W W",
+                     "W WWWWW W WWWWW W WWW W W W",
+                     "W     W W     W W W   W W W",
+                     "WWWWW W WWWWW WWW W WWWWW W",
+                     "W W   W   W   W   W   W   W",// ✓
+                     "W W WWWWW W WWW           W",
+                     "W0 G      W     W   W  G 0W",
+                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];// ✓
 
 // Random_3
-// this.blueprint1 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
-//                     "W    P      W             W",
-//                     "W WWWWWWWWW WWWWW WWWWWWW W",
-//                     "W   W     W     W   W     W",
-//                     "WWW WWW W WWWWW WWWWW WWW W",
-//                     "W W     W W   W W     W   W",
-//                     "W WWWWWWW WWW W W WWWWW WWW",
-//                     "W     W   W   W W     W   W",
-//                     "W W WWW WWW WWW WWWWW WWW W",
-//                     "W W W   W   0 W W     W   W",
-//                     "W WWW WWW WWW WWW WWWWW WWW",
-//                     "W   W W W   W     W   W   W",
-//                     "W0W W W W WWWWW WWWWW WWW0W",
-//                     "W W   W   W     W     W   W",
-//                     "W WWWWWWWWW WWWWW WWW W WWW",
-//                     "W W         W     W   W   W",
-//                     "W WWW WWWWWWWWWWW W WWWWW W",
-//                     "W     W         W W W   W W",
-//                     "WWWWWWW WWWWW W W W W W W W",
-//                     "W       W W   W   W   W W W",
-//                     "W WWWWWWW W W WWWWWWWWW W W",
-//                     "WG  W     W W W     W   WGW",
-//                     "WWW W WWW W WWW WWW WWWWW W",
-//                     "W   W   W W     W W W     W",
-//                     "W WWWWW W WWWWWWW W W WWWWW",
-//                     "WG      W    0    W      GW",
-//                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];
+ this.blueprint4 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
+                     "W    P      W             W",
+                     "W WWWWWWWWW WWWWW WWWWWWW W",
+                     "W   W     W     W   W     W",
+                     "WWW WWW W WWWWW WWWWW WWW W",
+                     "W W     W W   W W     W   W",
+                     "W WWWWWWW WWW W W WWWWW WWW",
+                     "W     W   W   W W     W   W",
+                     "W W WWW WWW WWW WWWWW WWW W",
+                     "W W W   W   0 W W     W   W",
+                     "W WWW WWW WWW WWW WWWWW WWW",
+                     "W   W W W   W     W   W   W",
+                     "W0W W W W WWWWW WWWWW WWW0W",
+                     "W W   W   W     W     W   W",
+                     "W WWWWWWWWW WWWWW WWW W WWW",
+                     "W W         W     W   W   W",
+                     "W WWW WWWWWWWWWWW W WWWWW W",
+                     "W     W         W W W   W W",
+                     "WWWWWWW WWWWW W W W W W W W",
+                     "W       W W   W   W   W W W",
+                     "W WWWWWWW W W WWWWWWWWW W W",
+                     "WG  W     W W W     W   WGW",
+                     "WWW W WWW W WWW WWW WWWWW W",
+                     "W   W   W W     W W W     W",
+                     "W WWWWW W WWWWWWW W W WWWWW",
+                     "WG      W    0    W      GW",
+                     "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];
 
 
 // Test Case
