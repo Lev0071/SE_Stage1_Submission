@@ -57,7 +57,7 @@ function Pacman(player, x, y, w, h) {
                 if (arr[i].type === "pellet" && !arr[i].empty) {
                     arr[i].empty = true;
                     this.pellets_eaten++;
-                    this.score++;
+                    this.score= this.score + 50;
                     if (this.pellets_eaten % 1 == 0) {
                         pacman_chomp_sound.play();
                     }
@@ -74,7 +74,7 @@ function Pacman(player, x, y, w, h) {
                 //hit a power pellet
                 if (arr[i].type === "power_pellet" && !arr[i].empty) {
                     arr[i].empty = true;
-                    this.score += 50;
+                    this.score += 150;
                     power_pellet_sound.play();
                     this.d += 10;
 

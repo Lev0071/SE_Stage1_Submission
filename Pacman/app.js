@@ -16,11 +16,14 @@
   var button2;
   var button3;
   var button4;
+  var button5;
   var font;
   var maze;
   var question;
   var randomMaze = 0
   var num;
+  var pac;
+  
   
 
 
@@ -43,36 +46,51 @@
 
       font = loadFont("Font.otf");
 
-      intro_music = loadSound('sounds/pacman_beginning.mp3');
-      intro_music.setVolume(0.0);
+      pac = loadSound('sounds/pac.mp3');
+      pac.setVolume(0.03);
 
-      pacman_chomp_sound = loadSound('sounds/pacman_chomp.m4a');
-      pacman_chomp_sound.setVolume(0.00);
+      intro_music = loadSound('sounds/pacman_beginning.mp3');
+      intro_music.setVolume(0.09);
+
+      pacman_chomp_sound = loadSound('sounds/pacman_chomp1.mp3');
+      pacman_chomp_sound.setVolume(0.05);
 
       pacman_death_sound = loadSound('sounds/pacman_death.mp3');
-      pacman_death_sound.setVolume(0.0);
+      pacman_death_sound.setVolume(0.09);
 
       pacman_eatghost_sound = loadSound('sounds/ghost-die.m4a');
-      pacman_eatghost_sound.setVolume(0.0);
+      pacman_eatghost_sound.setVolume(0.09);
 
-      power_pellet_sound = loadSound('sounds/power_pellet.m4a');
-      power_pellet_sound.setVolume(0.0);
+      power_pellet_sound = loadSound('sounds/pacman_pellet.wav');
+      power_pellet_sound.setVolume(0.1);
 
       congratulations_sound = loadSound('sounds/congratulations.m4a');
-      congratulations_sound.setVolume(0.0);
+      congratulations_sound.setVolume(0.09);
 
       boom_sound = loadSound('sounds/boom.m4a');
-      boom_sound.setVolume(0.0);
+      boom_sound.setVolume(0.09);
 
 
 
   }
 
 
-  function newLevel(level_num) {
-      congratulations_sound.play();
+
+  this.youWin = function(){
+    pac.setVolume(0.00);
+
+        button5 = createImg('images/exit2.png');
+        button5.position(350, 785);
+        button5.size(75, 36);
+        button5.mousePressed(normalMode);
+    
+  } 
+
+
+   this.newLevel = function(level_num) {
+      youWin();
       hud.updateLevel(level_num);
-      level.buildNewMap(level.blueprint1);
+      
 
 
   }
@@ -101,7 +119,7 @@
   }
 
   function mode1() {
-
+    pac.play();
     mode = 1;
     
 }
@@ -154,6 +172,7 @@ function exitGame() {
 
     this.normalMode = function() {
         mode = 0
+        pac.setVolume(0.00);
     }
 
     this.mode5 = function() {
@@ -236,6 +255,7 @@ function exitGame() {
     }
 
     if (mode == 1) {
+        
       removeElements();
       background(0);
       level.drawMap(level.current_map);
@@ -286,6 +306,10 @@ function exitGame() {
   function keyPressed(e) {
 
       e.preventDefault();
+
+      if(keyCode === 32){
+          mode = 0
+      }
 
       if (gameover) {
 

@@ -151,10 +151,17 @@ function Level(level_num, players_num) {
         }
 
         if (!power_pellets_remaining && !pellets_remaining) {
-            this.level_num++
-                newLevel(this.level_num);
-        }
+            
+            newLevel(this.level_num);
+            fill("#fff");
 
+            textSize(64);
+            text("YOU WIN! :D", width / 2 - 180, height / 2 - 240);
+            
+            
+            
+        }
+    
 
 
     };
@@ -195,13 +202,13 @@ function Level(level_num, players_num) {
                      "W WWW WWW WWWWW WWW WWW W W",
                      "W W W W W     W   W     W W",// ✓ 9
                      "W W W W WWWWW WWWWWWWWWWW W",// ✓ 21
-                     "W WGW W W         W   W   W",// ✓ 8
+                     "W W W W W         W   W   W",// ✓ 8
                      "W W W W W WWWWWWW W W W W W",// ✓ 17
                      "W0  W W   W     W   WGW W W",// ✓ 9
                      "W WWW W WWW WWW WWWWW W WWW",// ✓ 20
                      "W W   W W   W   W W   W   W",// ✓ 9
                      "WWW WWWWW WWW WWW W WWWWW W",// ✓ 21
-                     "W G W     W   W     W     W",// ✓ 6
+                     "W G W     W   W     W  g  W",// ✓ 6
                      "W W WWWWWWW WWWWW WWW W WWW",// ✓ 21
                      "W W     W W     W W   W   W",// ✓
                      "W WWWWW W WWWWW W WWWWW W W",// ✓ 20
@@ -222,7 +229,7 @@ function Level(level_num, players_num) {
  this.blueprint3 =  ["WHWWWWWWWWWWWWWWWWWWWWWWWWW",
                      "W0    P        W   W W   0W",
                      "WWWWWWWWWWWWW W W W W W W W",
-                     "W           W W   W   W W W",
+                     "W     G     W W   W   W W W",
                      "W WWWWWWWWW W WWWWWWW W W W",
                      "W0  W   W W W      0W W W W",
                      "WWW W W W W W WWWWW WWW W W",
@@ -230,7 +237,7 @@ function Level(level_num, players_num) {
                      "W W W W W W WWWWW WWWWWWW W",
                      "W W   W W     W W W   W   W",
                      "W WWWWW WWWWW W W WWW W WWW",
-                     "W     W     W W W     W   W",
+                     "W     W     W W W   G W   W",
                      "W WWW WWWWW W W WWWWW WWW W",
                      "W   W     W W0W W       W W",
                      "WWWWW WWWWWWW W W WWWWWWW W",
@@ -238,13 +245,13 @@ function Level(level_num, players_num) {
                      "W WWWWW WWW W WWWWW W W W W",
                      "W W     W W   W     W   W W",
                      "W W WWWWW WWWWW WWWWWWWWW W",
-                     "W G W     W       W  G  W W",
+                     "W   W     W       W  G  W W",
                      "W WWWWW W WWWWW W WWW W W W",
                      "W     W W     W W W   W W W",
                      "WWWWW W WWWWW WWW W WWWWW W",
                      "W W   W   W   W   W   W   W",// ✓
-                     "W W WWWWW W WWW           W",
-                     "W0 G      W     W   W  G 0W",
+                     "W W WWWWW W WWW   G       W",
+                     "W0        W     W   W    0W",
                      "WWWWWWWWWWWWWWWWWWWWWWWWWHW"];// ✓
 
 // Random_3

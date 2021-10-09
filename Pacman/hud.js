@@ -18,6 +18,19 @@ function HUD(level) {
             button1.size(75, 36);
             button1.mousePressed(randomMazes);
         }
+        if (gameover) {
+
+            button1 = createImg('images/exit2.png');
+            button1.position(350, 785);
+            button1.size(75, 36);
+            button1.mousePressed(normalMode);
+        }
+        if(num == 5){
+            button1 = createImg('images/exit2.png');
+            button1.position(350, 785);
+            button1.size(75, 36);
+            button1.mousePressed(normalMode);
+        }
 
         
 
@@ -26,7 +39,7 @@ function HUD(level) {
         for(i=pacmans.length -1; i>-1; i--){
             fill(pacmans[i].color);
             text("lives: " + pacmans[i].lives, (i*700) + 24, height -5);
-           // text("score: " + pacmans[i].score, (i*600) + 20, 20);
+            text("score: " + pacmans[i].score, (i*600) + 24, 20);
             
         }
         
@@ -44,10 +57,11 @@ function HUD(level) {
             fill(this.color);
             fill("#fff");
             textSize(32);
-            text("Hit '1' or '2' for new game", width / 2 - 180, height / 2 -190);
+            //text("Hit '1' or '2' for new game", width / 2 - 180, height / 2 -190);
         //    text("High Score: " + high_score, width / 2 - 180, height / 2 + 60);
             
         }
+       
 
     }
 
